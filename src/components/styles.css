@@ -1,0 +1,107 @@
+*Header*/
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 97.5px; /* Increased height */
+    padding: 0 30px; /* Increased padding */
+    color: var(--color-secondary-dark);
+}
+.headerWrapper #homeLink{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.headerWrapper #searchSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.headerWrapper #searchSection input {
+    font-size: large;
+    box-sizing: border-box;
+    border-style: solid;
+    font-family: inherit;
+    line-height: inherit;
+    color: var(--color-dark-text);
+    outline: none;
+    border-width: 1.5px; /* Increased border-width */
+    border-color: var(--color-border);
+    padding: 12px; /* Increased padding */
+    border-radius: 20px; /* Increased border radius */
+    width: 450px; /* Adjusted width */
+
+}
+.headerWrapper #searchSection input:focus {
+    border: 3px solid var(--color-secondary-light); /* Adjust as needed */
+}
+
+.headerWrapper #searchSection img[alt="Search"]{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+img[alt="Search"]:hover {
+    transform: scale(1.4);
+    transition: transform 0.3s ease-in;
+}
+.navbar {
+    cursor: pointer;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 22.5px; /* Increased gap */
+}
+
+.sub_header .navbar{
+    list-style-type: none;
+    margin: 0;
+}
+
+.sub_header .nav-item:hover {
+    border-bottom: 3px solid var(--color-secondary); /* Adjust as needed */
+}
+
+.sub_header {
+    padding: 5px;
+    border-bottom: 1px solid var(--color-border); /* Adjust as needed */
+}
+
+
+#tabs {
+    height: 30px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub_header a {
+    color: var(--color-gray-light);
+}
+
+
+/*Color scheme*/
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg-primary: #efeef5;
+        --color-widgets: #f6f5f7;
+        --color-primary: #de2454;
+        --color-primary-dark: #b41b43;
+        --color-secondary: #573ba3;
+        --color-secondary-dark: #2b0f42;
+        --color-secondary-light: rgba(170, 157, 208, 0.5);
+        --color-gray: gray;
+        --color-gray-light: #828087;
+        --color-gray-lighter: #cecdd1;
+        --color-gray-lightest: #eae9ed;
+        --color-border: #e1e1e3;
+        --color-border-light: #e1e1e3;
+        --color-dark-text: #2c293b;
+    }
+}
